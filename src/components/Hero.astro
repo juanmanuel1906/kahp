@@ -1,0 +1,130 @@
+---
+const personalImageAlt = "Miguel Ángel";
+import Badge from "@/components/Badge.astro";
+import LinkedInIcon from "@/components/icons/LinkedIn.astro";
+import MailIcon from "@/components/icons/Mail.astro";
+import SocialPill from "@/components/SocialPill.astro";
+---
+
+<div class="flex justify-between items-start gap-8 max-w-7xl mx-auto">
+  <!-- Columna izquierda -->
+  <div class="max-w-xl">
+    <div class="flex gap-4 mb-4">
+      <img
+        class="rounded-full shadow-lg size-16"
+        src="/main-logo.webp"
+        alt={personalImageAlt}
+      />
+      <h1
+        class="tac-one-regular text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white"
+      >
+        KAPH, LEGADO AFRICANO
+      </h1>
+    </div>
+    <p
+      class="mt-6 text-xl text-gray-800 dark:[&>strong]:text-orange-400 [&>strong]:text-orange-400 [&>strong]:font-semibold dark:text-gray-300"
+    >
+      Nuestra corporación es una organización dedicada a <strong
+        >preservar y promover el legado ancestral</strong
+      > a través de la música, la danza, la educación y el bienestar.
+    </p>
+    <nav class="flex flex-wrap gap-4 mt-8">
+      <div class="outer-headings">
+        <h5
+          class="flex text-4xl font-bold tracking-tight sm:text-4xl"
+        >
+          <span class="inner-headings text-gray-800 dark:text-white">
+            Somos&nbsp;
+            <span class="tac-one-regular text-orange-400">
+              arte <br />
+              cultura <br />
+              alegría <br />
+              expresión <br />
+            </span>
+          </span>
+        </h5>
+      </div>
+      <SocialPill href="mailto:kahplegadoafricano@gmail.com">
+        <MailIcon class="size-4" />
+        Contáctanos
+      </SocialPill>
+    </nav>
+  </div>
+
+  <!-- Imagen a la derecha -->
+  <div class="relative hidden md:block max-w-sm">
+    <img
+      src="/cultural-girl.webp"
+      alt="Mujer con turbante africano"
+      class="w-full h-auto fade-bottom"
+    />
+  </div>
+
+  <style>
+    .fade-bottom {
+      -webkit-mask-image: linear-gradient(
+        to bottom,
+        black 70%,
+        transparent 100%
+      );
+      mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+    }
+
+    .outer-headings {
+    }
+
+    h5 {
+      font-size: 1.8rem;
+    }
+
+    .tac-one-regular {
+      font-family: "Tac One", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    .inner-headings {
+      display: flex;
+      border: 0px solid #ddd;
+      height: 50px;
+      line-height: 50px;
+      font-size: 2rem;
+      overflow: hidden;
+      vertical-align: middle;
+    }
+
+    .inner-headings span {
+      position: relative;
+      animation: animation 4s linear infinite;
+      display: inline-block;
+    }
+
+    @keyframes animation {
+      0%,
+      100% {
+        top: 0;
+      }
+      20% {
+        top: 0;
+      }
+      25% {
+        top: -50px;
+      }
+      45% {
+        top: -50px;
+      }
+      50% {
+        top: -100px;
+      }
+      70% {
+        top: -100px;
+      }
+      75% {
+        top: -150px;
+      }
+      95% {
+        top: -150px;
+      }
+    }
+  </style>
+</div>

@@ -1,0 +1,29 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+const EXPERIENCE = [
+  {
+    date: "2022 - 2023",
+    title: "CULTIVAARTE",
+    company: "Expojóvenes",
+    description:
+      "Gestión cultural en el municipio de Circasia."
+  },
+  {
+    date: "2018",
+    title: "ASODERNATU",
+    company: "Gestores Culturales",
+    description:
+      "Procesos de formación de danza y de música.",
+  },
+]
+---
+
+<ol class="relative mt-16">
+  {
+    EXPERIENCE.map((experience) => (
+      <li class="">
+        <ExperienceItem {...experience} />
+      </li>
+    ))
+  }
+</ol>
